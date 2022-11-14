@@ -1,0 +1,67 @@
+body {
+  background-color: #F7E723; 
+  font-family: "Anton", sans-serif;
+}
+
+h1 {
+  font-size: clamp(5rem, 1vw, 7rem);
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+img {
+  height: 60px;
+  border-radius: 9vmax
+}
+
+.dice {
+  background: #04186C;
+  height: 400px;
+  width: 400px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.one-player,
+.one-dice {
+  grid-column: 2;
+}
+
+.two-player,
+.two-dice {
+  grid-column: 4;
+}
+
+.one-dice,
+.two-dice {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+  padding: 1em;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1;
+  }
+
+  .one-player,
+  .two-player,
+  .one-dice,
+  .two-dice {
+    grid-column: 2;
+  }
+
+  .two-dice {
+    grid-row: 4;
+  }
+}
